@@ -121,11 +121,13 @@ function IssueRow(props) {
     return (
       <>
       {/****** Q2: Start Coding here. Add Logic to render a row  ******/}
-      <ScrollView style={styles.dataWrapper}>
-        {data.map((issue) => (
-          <IssueRow key={issue.id} issue={issue} />
+      <View style={styles.row}>
+        {data.map((cellData, index) => (
+          <Text style={styles.text} key={index}>
+            {cellData}
+          </Text>
         ))}
-      </ScrollView>
+      </View>
       {/****** Q2: Coding Ends here. ******/}  
       </>
     );
